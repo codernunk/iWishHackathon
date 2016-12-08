@@ -35,12 +35,17 @@ namespace MyVanguardExperience.Droid
                 intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(file));
                 StartActivityForResult(intent, 0);
             };
+
+            (Xamarin.Forms.Application.Current as App).GotoBrowseActivity += () => {
+                StartActivity(typeof(BrowseActivity));
+            };
 		}
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
             (Xamarin.Forms.Application.Current as App).ShowImage(file.Path);
+
 
         }
     }

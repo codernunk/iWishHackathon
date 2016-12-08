@@ -8,16 +8,17 @@ using Xamarin.Forms;
 namespace MyVanguardExperience {
 
     public class Picture {
-        int PictureID { get; set; }
+        public int PictureID { get; set; }
 
-        string Author { get; set; }
-        Image Photo { get; set; }
-        string Description { get; set; }
-        DateTime TimeStamp { get; set; }
+        public string Author { get; set; }
+        public string PhotoPath { get; set; }
+        
+        public string Description { get; set; }
+        public DateTime TimeStamp { get; set; }
 
-        public Picture(string author, Image photo, string description, DateTime timeStamp) {
+        public Picture(string author, string photo, string description, DateTime timeStamp) {
             Author = author;
-            Photo = photo;
+            PhotoPath = photo;
             Description = description;
             TimeStamp = timeStamp;
         }

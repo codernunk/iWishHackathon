@@ -8,35 +8,29 @@ namespace MyVanguardExperience
         public static App Instance;
         readonly Image image = new Image();
 
-        public App()
-		{
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
+        public App() {
+            Instance = this;
+
+            var button = new Button {
+                Text = "Snap!",
+                Command = new Command(o => ShouldTakePicture()),
+            };
+
+            MainPage = new ContentPage {
+                Content = new StackLayout {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
-                new Button {
-                    Text = "Capture Moment",
-                    Command = new Command(o => ShouldTakePicture()),
-                },
-                image,
-            },
+                    button,
+                    image,
+           },
                 },
             };
-            //MainPage = new MyVanguardExperiencePage();
         }
 
-        public event Action ShouldTakePicture = () => {};
+        public event Action ShouldTakePicture = () => { };
 
-        public void ShowImage(string fileLocation)
-        {
-            image.Source = ImageSource.FromFile(fileLocation);
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
+        public void ShowImage(string filepath) {
+            image.Source = ImageSource.FromFile(filepath);
         }
 
         protected override void OnStart()

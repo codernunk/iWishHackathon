@@ -41,6 +41,7 @@ namespace MyVanguardExperience.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
             (Xamarin.Forms.Application.Current as App).ShowImage(file.Path);
+
         }
     }
 }

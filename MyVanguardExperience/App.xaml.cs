@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace MyVanguardExperience
@@ -28,6 +29,8 @@ namespace MyVanguardExperience
         }
 
         public event Action ShouldTakePicture = () => { };
+
+        public Dictionary<string, Picture> Pictures = new Dictionary<string,Picture>();
 
         public void ShowImage(string filepath) {
             image.Source = ImageSource.FromFile(filepath);

@@ -35,3 +35,7 @@ C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\obj\De
 C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\bin\Debug\MyVanguardExperience.dll.mdb
 C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\obj\Debug\MyVanguardExperience.dll.mdb
 C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\bin\Debug\MyVanguardExperience.dll.mdb
+C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\obj\Debug\MyVanguardExperience.dll.mdb
+C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\bin\Debug\MyVanguardExperience.dll.mdb
+C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\obj\Debug\MyVanguardExperience.dll.mdb
+C:\Users\Just\Source\Repository\iWish\iWishHackathon\MyVanguardExperience\bin\Debug\MyVanguardExperience.dll.mdb

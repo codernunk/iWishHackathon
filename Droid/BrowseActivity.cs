@@ -13,7 +13,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 namespace MyVanguardExperience.Droid {
-    [Activity(Label = "My Vanguard Experiencefdsf", Icon = "@drawable/icon")]
+    [Activity(Label = "My Vanguard Experience", Icon = "@drawable/icon")]
     public class BrowseActivity : Activity {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
@@ -23,7 +23,12 @@ namespace MyVanguardExperience.Droid {
             var gridview = FindViewById<GridView>(Resource.Id.experienceGridView);
             gridview.Adapter = new ImageAdapter(this);
 
-            gridview.ItemClick += (sender, args) => Toast.MakeText(this, args.Position.ToString(), ToastLength.Short).Show();
+            gridview.ItemClick += (sender, args) => {
+
+                App.Instance.CurrentPicture = App.Instance.Pictures[args.Position];
+                //Toast.MakeText(this, App.Instance.Pictures[args.Position].Description, ToastLength.Short).Show()
+                StartActivityForResult(typeof(ShareExperienceActivity), 10);
+            };
         
 
             //// Create your application here

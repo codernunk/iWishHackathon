@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/EditDetails"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="307.0dp"
+    android:id="@+id/imgPreview" />
+
+  <EditText
+      android:text="Enter Description Here"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtDescription"
+    />
+  
+  <CheckBox
+      android:text="Crew2Crew"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/boxC2C" />
+  <CheckBox
+      android:text="SprintStars"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/boxAgility" />
+  <CheckBox
+      android:text="Hackathon"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/boxHack" />
+  <CheckBox
+      android:text="VTO"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/boxVto" />
+  <CheckBox
+      android:text="Event"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/boxEvent" />
+  <Button
+      android:text="Save"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btnSave" />
+
+</LinearLayout>

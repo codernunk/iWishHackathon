@@ -1,4 +1,5 @@
 using Android.Content;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
@@ -38,7 +39,8 @@ namespace MyVanguardExperience.Droid {
             }
 
             // imageView.SetImageResource(thumbIds[position]);
-            imageView.SetImageURI(Android.Net.Uri.FromFile(new Java.IO.File(App.Instance.Pictures[position].PhotoPath)));
+            Bitmap b = BitmapFactory.DecodeByteArray(App.Instance.Pictures[position].Photo, 0, App.Instance.Pictures[position].Photo.Length);
+            imageView.SetImageBitmap(b);
             return imageView;
         }
     }

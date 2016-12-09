@@ -98,6 +98,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShareExperienceActivity.cs" />
+    <Compile Include="EditDetailsActivity.cs" />
     <Compile Include="BrowseActivity.cs" />
     <Compile Include="ImageAdapter.cs" />
     <Compile Include="MainActivity.cs" />
@@ -111,11 +113,17 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <AndroidResource Include="Resources\layout\EditDetailsActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\shareMyExperience.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\myExperience.axml">
@@ -124,34 +132,22 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\vg_red_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\vg_red_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\vg_text_white.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash0.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splashNext0.png" />
+    <Content Include="Resources\drawable-xhdpi\icon.png" />
+    <Content Include="Resources\drawable-xhdpi\splash.png" />
+    <Content Include="Resources\drawable-xhdpi\splashNext.png" />
+    <Content Include="Resources\drawable-xxhdpi\icon.png" />
+    <Content Include="Resources\drawable-xxhdpi\splash.png" />
+    <Content Include="Resources\drawable-xxhdpi\splashNext.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashNext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <Content Include="Resources\drawable\logo_red.png" />
+    <AndroidResource Include="Resources\drawable\splash0.png" />
+    <AndroidResource Include="Resources\drawable\splashNext0.png" />
+    <Content Include="Resources\drawable\vg_red_blank.png" />
+    <Content Include="Resources\drawable\vg_red_icon.png" />
+    <Content Include="Resources\drawable\vg_text_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

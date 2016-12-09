@@ -13,17 +13,17 @@ namespace MyVanguardExperience
             Instance = this;
 
             var btnMoment = new Button {
-                Text = "Capture Moment",
+                Text = "Capture a Moment",
                 Command = new Command(o => ShouldTakePicture()),
             };
 
             var btnExport = new Button {
-                Text = "Share the Moment",
-                Command = new Command(o => ShouldTakePicture()),
+                Text = "Share the Experience",
+                Command = new Command(o => SendEmail()),
             };
 
             var btnBrowsMoments = new Button {
-                Text = "My Experiences",
+              Text = "My Experiences",
                 Command = new Command(o => GotoBrowseActivity()),
             };
             
@@ -42,16 +42,16 @@ namespace MyVanguardExperience
 
         public event Action ShouldTakePicture = () => { };
         public event Action GotoBrowseActivity = () => { };
+        public event Action SendEmail = () => { }; 
 
         public List<Picture> Pictures = new List<Picture>();
 
+        public Picture CurrentPicture;
+
         public void ShowImage(string filepath) {
-            image.Source = ImageSource.FromFile(filepath);
-            Picture pic = new Picture("un8k", filepath, "Steak", DateTime.Now);
-
-            Pictures.Add(pic);
-
-
+            //image.Source = ImageSource.FromFile(filepath);
+            
+            //Picture pic = new Picture("u1bh", filepath, "Test Photo", DateTime.Now);
         }
 
         protected override void OnStart()

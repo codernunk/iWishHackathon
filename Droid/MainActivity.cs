@@ -14,7 +14,7 @@ using Android.Provider;
 namespace MyVanguardExperience.Droid
 {
 
-	[Activity(Label = "MyVanguardExperience.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity(Label = "mainActivity", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
         static readonly File file = new File(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures), "tmp.jpg");
@@ -25,6 +25,7 @@ namespace MyVanguardExperience.Droid
 			ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+            //SetContentView(Resource.Layout.myExperience);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
